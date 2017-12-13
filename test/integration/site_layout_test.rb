@@ -11,4 +11,15 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', about_path
     get contact_path
   end
+
+  test "titles are correct when changing paths" do
+    get root_path
+    assert_select 'title', full_title
+    get about_path
+    assert_select 'title', full_title('About')
+    get contact_path
+    assert_select 'title', full_title('Contact')
+    get help_path
+    assert_select 'title', full_title('Help')
+  end
 end
