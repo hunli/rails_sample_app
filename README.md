@@ -6,6 +6,8 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+Ruby Version: 2.4.1
+Rails Version: 5.1.2
 
 * System dependencies
 
@@ -16,6 +18,7 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
+rails test
 
 * Services (job queues, cache servers, search engines, etc.)
 
